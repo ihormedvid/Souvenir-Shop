@@ -31,6 +31,9 @@ public class Main {
             case ("report"):
                 //TODO
                 break;
+            default:
+                System.out.println("Command is not found");
+                break;
         }
 
     }
