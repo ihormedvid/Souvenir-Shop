@@ -1,6 +1,9 @@
 package com.company;
 
 import java.io.*;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.Locale;
 
 
 public class Main {
@@ -18,9 +21,24 @@ public class Main {
         String[] userStringSplited = userString.split("\\s+");
         String userCommand = userStringSplited[0].toLowerCase();
 
+        String[] userDateSplited = userStringSplited[1].split("\\-");
+        String userDateYear = userDateSplited[0];
+        String userDateMounth = userDateSplited[1];
+        String userDateDay = userDateSplited[2];
+
+        int userPrice = Integer.parseInt(userStringSplited[2]);
+        String userCurrency = userStringSplited[3];
+
+        String userGoods = userStringSplited[4];
+
+        PurchaceData data = new PurchaceData(userDateSplited,userPrice,userCurrency,userGoods);
+
+
+
+
         switch (userCommand) {
             case ("purchase"):
-                //TODO
+
                 break;
             case ("all"):
                 //TODO
